@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define icons to be used from fontawesome
+
+
+
+\def\faGithub{\symbol{"F09B}}
+
+\def\faLinkedin{\symbol{"F0E1}}
+
+\def\faEnvelope{\symbol{"F003}}
+
+\def\faPhone{\symbol{"F095}}
+
+\def\faHome{\symbol{"F015}}
+
+\documentclass[]{deedy-resume-openfont}
+% add after documentclass
+
+\usepackage{fontspec} % required for fontawesome
+
+\usepackage{fontawesome} % required for icons used in about section
+
+
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Ashley}{Moss}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Virginia Tech}
+\descript{B.S. in Mathematics}
+\location{May '12 | Blacksburg, VA}
+\location {3.59 / 4.00}
+\sectionsep
+
+\subsection{The College of}
+\subsection{William \& Mary}
+\location{Aug '08 - May '09 | Williamsburg, VA}
+\location{ 3.62 / 4.00}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Contact
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Contact}
+
+\faHome {  5411 McGrath Blvd \# 501} \\
+{  Rockville, Maryland 20852} \\
+\faEnvelope  {  missashleymoss@gmail.com} \\
+\faPhone { (m) 814.574.1070} \\
+\faPhone { (w) 301.688.0093} \\
+\faLinkedin  {  linkedin.com/in/ashleymoss2} \\
+\faGithub  {  github.com/ashleymoss} \\
+\sectionsep 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\subsection{Undergraduate}
+Real Analysis \\
+Mathematical Modeling \\
+Vector Calculus \\
+Abstract Algebra \\
+Linear Algebra \\
+Physics I-II \\
+Chemistry I-II
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Frequent} 
+Python \textbullet{}   NumPy \textbullet{} Pandas \\
+SQL \textbullet{} VBA \textbullet{} MATLAB 
+\sectionsep
+
+\location{Some} 
+Java \textbullet{} SAS \textbullet{} R  \textbullet{} \LaTeX\
+\sectionsep
+
+\subsection{Data Visualization}
+\location{Frequent}
+Excel \textbullet{}   Tableau \textbullet{} MATLAB \\
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interests}
+\subsection{Running Coach}
+\location{Girls on the Run}
+\location{Jan '13 - Dec '13 | Kesington, MD} 
+Prepared girls for a 5K run  \\
+Taught lessons on health and wellness
+\sectionsep
+
+\subsection{Causes}
+Education \textbullet{} Health \textbullet{} Human Rights \\
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Post-Graduate Experience}
+
+\runsubsection{Booz Allen  Hamilton} \\
+\descript{Sr. Consultant, Operations Research }
+\location{Jun '13 – present | Annapolis Junction, MD}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item Work with clients and team members to mathematically model problems in operations research
+\item Parse, groom, and analyze data sets
+\item Lead projects and programming initiatives
+\item Streamline processes using Pandas/Python and VBA
+\end{tightemize}
+\sectionsep
+
+\descript{Consultant, Operations Research }
+\location{May '12 - Jun '13 | Annapolis Junction, MD}
+\sectionsep
+
+\section{Pre-Graduate Experience}
+\runsubsection{Booz Allen Hamilton} \\
+\descript{Intern, Operations Research }
+\location{Winter '11 | Annapolis Junction, MD}
+\begin{tightemize}\item Formulated a project implementation plan in coordination with interns and developers
+\end{tightemize}
+\sectionsep
+
+\descript{Intern, Cyber Cohort }
+\location{Summer '11 | Annapolis Junction, MD}
+\begin{tightemize}\item Created an agent-based model of an economic phenomenon
+\item Presented results to senior leadership
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Kaplan Test Preparation} \\
+\descript{Tutor \& Teacher}
+\location{Apr '10 – Apr '12 | Blacksburg, VA}
+\begin{tightemize}
+\item Prepared students for for the GRE in one-on-one and classroom settings
+\item Led on-campus informational and marketing events
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Leaf \& Ladle at West End Market} \\
+\descript{Student Assistant Manager}
+\location{Aug '11 – Apr '12 | Blacksburg, VA}
+\begin{tightemize}
+\item Managed a team of 6-8 student employees
+\item Oversaw inventory control and food safety proceedures
+\end{tightemize}
+\sectionsep
+
+\descript{Student Worker}
+\location{Sep '10 – Aug '11 | Blacksburg, VA}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+'08	& Maryland Robert C. Byrd Honors Scholar \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Societies} 
+
+\begin{tabular}{rll}
+'12 	& Chi Delta Alpha Community Service Sorority\\
+\end{tabular}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
